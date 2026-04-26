@@ -5,7 +5,6 @@ from TTS.api import TTS
 
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
 tts.to("cuda")
-
 wav_path = os.path.join(os.path.dirname(__file__), "voice_ref.wav")
 
 chapter_store = {}
