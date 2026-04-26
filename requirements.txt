@@ -2,5 +2,3 @@ fastapi
 uvicorn
 TTS==0.21.3
 pydub
-torch==2.3.1
-torchaudio
