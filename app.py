@@ -9,7 +9,7 @@ class TTSRequest(BaseModel):
     text: str
     chapter: int
 
-@app.post("/generate")
+@app.post("/chapter-audio")
 def generate(req: TTSRequest):
     init_chapters(req.text)
     path = generate_chapter_audio(f"chapter_{req.chapter}")
