@@ -1,4 +1,6 @@
 import os
+os.environ["COQUI_TOS_AGREED"] = "1"
+
 import re
 from pydub import AudioSegment
 from TTS.api import TTS
