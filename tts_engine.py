@@ -2,9 +2,12 @@ import os
 import re
 from pydub import AudioSegment
 from TTS.api import TTS
+import torch
 
 tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
-tts.to("cuda")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+tts.to(device)
+
 wav_path = os.path.join(os.path.dirname(__file__), "voice_ref.wav")
 
 chapter_store = {}
